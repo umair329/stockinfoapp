@@ -3,6 +3,8 @@ Utilizing TDA-API, python package to pull in specific markets information for Ob
 
 ## Summary of Python Package Project - Stock Information Pull 
 
+Please run main.py
+
 ## Install & Run Instructions 
 
 1. Create a python virtual environment, and use "pip install -r requirements.txt" to download all necessary packages
