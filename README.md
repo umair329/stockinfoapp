@@ -82,67 +82,39 @@ Utilizing TDA-API, python package to pull in specific markets information for Ob
         return{
             "error": "sector not found"
         }
-     get_sector("fin")
-```
+        get_sector("fin")
 
+1)Import Package - TDA API
+2)Authenticate Client via "Auth" - This basically allows one to create a token to assign to an actual account with username and password from exisiting TD Ameritrade free brokerage account.
+3)Than, you can pull the last closing price on the specific stock ticker, followed by a couple of error prompt if quote failes.
+4)Than, you can pull data on last prices of stocks from a selected sector
+5)In this case I have determined the sector to be TECH - the five tech stocks inlude XLK, Microsoft, Google, Apple & Netflix
+6)Allows you to get end of day quote of the stock
+7)The alternative sector is FIN - so you can see the stock end of day quotes for XLF, BAC, JPM, WFC, C.
+8)This script allows you to pull info directly from TD America's real-time financial platform so that you can automate data pull on straightforward stock quote information.
 
 ## Future Idea
+   
+We can use this existing script as a base for future complex scripts that can pull more informatuon from the TD Ameritrade data-set on real-time financial markets information. Here we only use one metric from TD - which is the stock quote "end of day" price. There are dozens of other metrics we can pull from a particular stock(s) and leverage that information to derive insights. 
 
+A future idea includes, looking into more sectors and industries. Pulling information from ETF's or Indexes or other type of public funds. And automating the information pull to specific scenarios in ultimately making the user experience easier for a user to pull and retrive specific data points quickly.
 
-**Requests** is a simple, yet elegant HTTP library.
-
-```python
->>> import requests
->>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
->>> r.status_code
-200
->>> r.headers['content-type']
-'application/json; charset=utf8'
->>> r.encoding
-'utf-8'
->>> r.text
-'{"type":"User"...'
->>> r.json()
-{'disk_usage': 368627, 'private_gists': 484, ...}
-```
-
-Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
-
-Requests is one of the most downloaded Python package today, pulling in around `14M downloads / week`— according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `500,000+` repositories. You may certainly put your trust in this code.
-
-[![Downloads](https://pepy.tech/badge/requests/month)](https://pepy.tech/project/requests/month)
-[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
-[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)
-
-
-
-Requests is available on PyPI:
-
-```console
-$ python -m pip install requests
-```
-
-Requests officially supports Python 2.7 & 3.5+.
 
 ## Supported Features & Best–Practices
 
-Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+tda-api is an unofficial wrapper around the TD Ameritrade APIs. It strives to be as thin and unopinionated as possible, offering an elegant programmatic interface over each endpoint. Notable functionality includes:
 
-- Keep-Alive & Connection Pooling
-- International Domains and URLs
-- Sessions with Cookie Persistence
-- Browser-style TLS/SSL Verification
-- Basic & Digest Authentication
-- Familiar `dict`–like Cookies
-- Automatic Content Decompression and Decoding
-- Multi-part File Uploads
-- SOCKS Proxy Support
-- Connection Timeouts
-- Streaming Downloads
-- Automatic honoring of `.netrc`
-- Chunked HTTP Requests
+Login and authentication
+Quotes, fundamentals, and historical pricing data
+Options chains
+Streaming quotes and order book depth data
+Trades and trade management
+Account info and preferences
 
-## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)
 
-[![Read the Docs](https://raw.githubusercontent.com/psf/requests/master/ext/ss.png)](https://requests.readthedocs.io)
+## API Reference and User Guide available on [Read the Docs]
+
+https://pypi.org/project/tda-api/
+
+API Documentation: https://tda-api.readthedocs.io/en/latest/
 
